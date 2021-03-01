@@ -4,6 +4,7 @@ public class Jugador  implements Comparable<Jugador>{
 
     private String nombre;
     private Integer puntuacion;
+    private Integer perdidas;
 
     public Jugador(String nombre, Integer puntuacion) {
         this.nombre = nombre;
@@ -25,6 +26,15 @@ public class Jugador  implements Comparable<Jugador>{
 
     public void setPuntuacion(Integer puntuacion) {
         this.puntuacion = puntuacion;
+    }
+
+
+    public Integer getPerdidas() {
+        return perdidas;
+    }
+
+    public void setPerdidas(Integer perdidas) {
+        this.perdidas = perdidas;
     }
 
     @Override
