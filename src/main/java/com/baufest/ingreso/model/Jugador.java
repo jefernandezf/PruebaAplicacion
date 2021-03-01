@@ -11,6 +11,11 @@ public class Jugador  implements Comparable<Jugador>{
         this.puntuacion = puntuacion;
     }
 
+    public Jugador(String nombre, Integer puntuacion, Integer perdidas) {
+        this.nombre = nombre;
+        this.puntuacion = puntuacion;
+        this.perdidas = perdidas;
+    }
 
     public String getNombre() {
         return nombre;
