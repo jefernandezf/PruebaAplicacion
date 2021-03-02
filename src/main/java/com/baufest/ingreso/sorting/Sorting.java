@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Sorting {
 
@@ -27,7 +28,7 @@ public class Sorting {
 
 
             ordenarPorPuntuacionYNombre(lista);
-
+            ordenarPorPuntuacionPerdidasYNombre(lista);
 
 
         } catch (Exception e) {
@@ -53,6 +54,13 @@ public class Sorting {
         System.out.println(title);
         list.forEach(x -> System.out.println("\t" + x.toString()));
         System.out.println("");
+    }
+
+    public static void ordenarPorPuntuacionPerdidasYNombre(List<Jugador> jugadores) {
+        jugadores.stream()
+                .sorted(Comparator.reverseOrder())
+                .forEach(System.out::println);
+
     }
 
 
